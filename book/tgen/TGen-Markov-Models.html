@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Markov Models - Shadow Simulator</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Shadow Network Simulator</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Installation and Setup</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/supported_platforms.html"><strong aria-hidden="true">1.1.</strong> Supported Platforms</a></li><li class="chapter-item expanded "><a href="../shadow/install_dependencies.html"><strong aria-hidden="true">1.2.</strong> Dependencies</a></li><li class="chapter-item expanded "><a href="../shadow/install_shadow.html"><strong aria-hidden="true">1.3.</strong> Shadow</a></li><li class="chapter-item expanded "><a href="../shadow/system_configuration.html"><strong aria-hidden="true">1.4.</strong> System Configuration</a></li><li class="chapter-item expanded "><a href="../shadow/install_shadow_with_docker.html"><strong aria-hidden="true">1.5.</strong> (Experimental) Shadow with Docker</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> The Shadow Simulator</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/getting_started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../shadow/parsing_statistics.html"><strong aria-hidden="true">2.2.</strong> Parsing Statistics</a></li><li class="chapter-item expanded "><a href="../shadow/log_format.html"><strong aria-hidden="true">2.3.</strong> Log Format</a></li><li class="chapter-item expanded "><a href="../shadow/design_overview.html"><strong aria-hidden="true">2.4.</strong> Design Overview</a></li><li class="chapter-item expanded "><a href="../shadow/notes_and_faq.html"><strong aria-hidden="true">2.5.</strong> Notes and FAQs</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Simulation Customization</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/shadow_config.html"><strong aria-hidden="true">3.1.</strong> Shadow Configuration</a></li><li class="chapter-item expanded "><a href="../shadow/network_config.html"><strong aria-hidden="true">3.2.</strong> Network Configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/network_graph_attributes.html"><strong aria-hidden="true">3.2.1.</strong> Graph Configuration</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Developer Guides</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/developer_guide.html"><strong aria-hidden="true">4.1.</strong> Debugging and Profiling</a></li><li class="chapter-item expanded "><a href="../shadow/ci.html"><strong aria-hidden="true">4.2.</strong> Continous Integration Tests</a></li><li class="chapter-item expanded "><a href="../shadow/using_recompiled_libc.html"><strong aria-hidden="true">4.3.</strong> Using a Recompiled Libc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> The Shadow Project</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/contributing.html"><strong aria-hidden="true">5.1.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/coding_style.html"><strong aria-hidden="true">5.1.1.</strong> Coding Style</a></li><li class="chapter-item expanded "><a href="../shadow/pull_requests.html"><strong aria-hidden="true">5.1.2.</strong> Pull Requests</a></li></ol></li><li class="chapter-item expanded "><a href="../shadow/maintainer_playbook.html"><strong aria-hidden="true">5.2.</strong> Maintainer Playbook</a></li><li class="chapter-item expanded "><a href="../shadow/nsf_sponsorship.html"><strong aria-hidden="true">5.3.</strong> NSF Sponsorship</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">TGen Traffic Generator</li><li class="chapter-item expanded "><a href="../tgen/index.html"><strong aria-hidden="true">6.</strong> About</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Markov-Models.html" class="active"><strong aria-hidden="true">7.</strong> Markov Models</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Options.html"><strong aria-hidden="true">8.</strong> Options</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Overview.html"><strong aria-hidden="true">9.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../tgen/Tools-JSON-Format.html"><strong aria-hidden="true">10.</strong> JSON Format</a></li><li class="chapter-item expanded affix "><li class="part-title">Tor Network Simulation</li><li class="chapter-item expanded "><a href="../tornettools/index.html"><strong aria-hidden="true">11.</strong> TorNetTools</a></li><li class="chapter-item expanded "><a href="../oniontrace/index.html"><strong aria-hidden="true">12.</strong> OnionTrace</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Shadow Simulator</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/shadow" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="markov-models"><a class="header" href="#markov-models">Markov Models</a></h1>
+<p>TGen supports the use of Markov models to allow the user to control how TCP
+streams are created. TGen uses Markov models for three distinct processes:</p>
+<ul>
+<li>In a <strong>traffic</strong> action, a Markov model can be used to configure the flow
+creation process, i.e., the frequency with which new flows should
+be created. The Markov model specifies inter-flow delay distributions.
+This model is configured with the <em>flowmodelpath</em> and <em>markovmodelseed</em>
+attributes on the <strong>traffic</strong> action.</li>
+<li>In a <strong>flow</strong> action, a Markov model can be used to configure the stream
+creation process, i.e., the frequency with which new TCP streams should
+be created. The Markov model specifies inter-stream delay distributions.
+This model is configured with the <em>streammodelpath</em> and <em>markovmodelseed</em>
+attributes on the <strong>flow</strong> action. It can also be configured on a
+<strong>traffic</strong> action in order to apply the model to all flows generated by
+the action.</li>
+<li>In a <strong>stream</strong> action, a Markov model can be used to configure the packet
+creation process on the associated TCP stream, i.e., the frequency with
+which packets should be created. The Markov model specifies inter-packet
+delay distributions. This model is configured with the <em>packetmodelpath</em>
+and <em>markovmodelseed</em> attributes on the <strong>stream</strong> action. It can also be
+configured on <strong>traffic</strong> or <strong>flow</strong> actions in order to apply the model
+to all TCP streams generated the associated flows.</li>
+</ul>
+<p>More information about how to set up a Markov model in your TGen configuration
+file can be found in the <a href="TGen-Options.html">doc/TGen-Options.md</a> file.</p>
+<p>The remainder of this document explains the Markov model file format that TGen
+supports, and provides examples of how to generate Markov models that will
+pass TGen's Markov model validation.</p>
+<h1 id="file-format-and-structure"><a class="header" href="#file-format-and-structure">File Format and Structure</a></h1>
+<p>As with the config file, TGen uses the <code>graphml</code> file format to represent
+Markov models. As we explain the structure supported by TGen, we provide
+examples of generating the corresponding <code>graphml</code> elements and atrributes
+using <code>python3</code> and the <code>networkx</code> python3 module (installing the TGenTools
+toolkit will install the networkx module).</p>
+<p>Models are constructed as directed graphs:</p>
+<pre><code class="language-python">G = networkx.DiGraph()
+</code></pre>
+<p>Generally, the Markov model specifies a set of Markov model states and a set
+of transitions between pairs of states. Each state is also associated with a
+set of observations, and a set of emissions between states and observations.</p>
+<h3 id="vertices-markov-model-states-and-observations"><a class="header" href="#vertices-markov-model-states-and-observations">Vertices: Markov model states and observations</a></h3>
+<p>Vertices in the graph can either be Markov model &quot;states&quot; or &quot;observations&quot;,
+and the type is encoded in the graph using the <em>type</em> attribute on the graph
+node. Each vertex must specify a <em>type</em> and a <em>name</em>. The vertex <em>id</em> is
+required and must be unique but are otherwise not used by TGen.</p>
+<pre><code class="language-python">G.add_node('s0', type=&quot;state&quot;, name='start')
+G.add_node('s1', type=&quot;state&quot;, name='anything_you_want')
+</code></pre>
+<p>The graph must contain one and only one vertex of <em>type</em> <code>state</code> whose <em>name</em>
+is <code>start</code>. This instructs TGen in which state the Marov model begins. The
+<em>name</em> of the other vertices of <em>type</em> <code>state</code> are insignificant and can be
+set to any string.</p>
+<pre><code class="language-python">G.add_node('o1', type=&quot;observation&quot;, name='+')
+G.add_node('o2', type=&quot;observation&quot;, name='-')
+</code></pre>
+<p>Vertices of <em>type</em> <code>observation</code> must set one of the following as the <em>name</em>,
+which encodes the action to be taken upon reaching a particular vertex. Valid
+<em>name</em> strings are:</p>
+<ul>
+<li><code>+</code>: Generate a packet from client to server (for packet models) or a new
+stream (for stream models)</li>
+<li><code>-</code>: Generate a packet from server to client (for packet models) or a new
+stream (for stream models)</li>
+<li><code>F</code>: Stop generating new packets (for packet models) or new streams
+(for stream models)</li>
+</ul>
+<p>For stream models, there is no difference between <code>+</code> and <code>-</code>: you can simply
+use <code>+</code> to indicate new stream creation on stream models.</p>
+<h3 id="edges-markov-model-state-transitions-and-emissions"><a class="header" href="#edges-markov-model-state-transitions-and-emissions">Edges: Markov model state transitions and emissions</a></h3>
+<p>Edges in the graph can either be Markov model &quot;transitions&quot; or &quot;emissions&quot;,
+and the type is encoded in the graph using the <em>type</em> attribute on the graph
+edge. Each edge must specify a <em>type</em> and a <em>weight</em>. The source and target
+vertex <em>id</em> must match those that were defined when creating the vertices.</p>
+<pre><code class="language-python">G.add_edge('s0', 's1', type='transition', weight=1.0)
+G.add_edge('s1', 's1', type='transition', weight=1.0)
+</code></pre>
+<p>Edges of <em>type</em> <code>transition</code> instruct TGen how to move between pairs of
+vertices of <em>type</em> <code>state</code>. For vertices of <em>type</em> <code>state</code> with multiple
+outgoing edges of <em>type</em> <code>transition</code>, TGen randomly selects one outgoing
+edge according to the weighted probabilities (each edge's probability is
+computed by dividing its weight by the sum of the weights of all outgoing
+<code>transition</code> edges from the same <code>state</code> vertex).</p>
+<pre><code class="language-python">G.add_edge('s1', 'o1', type='emission', weight=0.5, distribution='normal', param_location=5000000, param_scale=1000000)
+G.add_edge('s1', 'o2', type='emission', weight=0.5, distribution='exponential', param_rate=0.001)
+</code></pre>
+<p>Whenever TGen moves between states, there is an associated event observation.
+Edges of <em>type</em> <code>emission</code> instruct TGen how to move between vertices of
+<em>type</em> <code>state</code> and vertices of <em>type</em> <code>observation</code>. For vertices of <em>type</em>
+<code>state</code> with multiple outgoing edges of <em>type</em> <code>emission</code>, TGen randomly
+selects one outgoing edge according to the weighted probabilities (each edge's
+probability is computed by dividing its weight by the sum of the weights of
+all outgoing <code>emission</code> edges from the same <code>state</code> vertex).</p>
+<p>Once an <code>emission</code> edge has been selected, the <code>observation</code> vertex
+connected by the edge instructs TGen which type of action to take.
+Additionally, each <code>emission</code> edge must specify the <code>distribution</code> attribute
+and the associated parameters for that distribution. These distributions encode
+the <strong>time delay in microseconds</strong> that TGen should create after the observation
+before transitioning to the next state.</p>
+<p>The following delay distributions are currently supported (more can be added
+as the need arises):</p>
+<ul>
+<li><code>uniform</code>: a uniform distribution requires the attributes
+<code>param_low</code> (a) and <code>param_high</code> (b) such that a &lt;= b to generate
+values uniformly in the range [a, b]</li>
+<li><code>normal</code>: a normal distribution requires the attributes
+<code>param_location</code> (mu) and <code>param_scale</code> (sigma)</li>
+<li><code>lognormal</code>: a lognormal distribution requires the attributes
+<code>param_location</code> (mu) and <code>param_scale</code> (sigma)</li>
+<li><code>exponential</code>: an exponential distribution requires the attribute
+<code>param_rate</code> (lamda)</li>
+<li><code>pareto</code>: a Pareto distribution requires the attributes
+<code>param_scale</code> (xm) and <code>param_shape</code> (alpha)</li>
+</ul>
+<p>A final graph can be written to a file using:</p>
+<pre><code class="language-python">networkx.write_graphml(G, 'sample.mmodel.graphml')
+</code></pre>
+<h1 id="examples"><a class="header" href="#examples">Examples</a></h1>
+<p>Below is a full example of code provided above. Another example script, which
+we use to generate our internal default packet and stream models, can be found
+in the repository at <a href="../tools/scripts/generate_mmodel_graphml.py">tools/scripts/generate_mmodel_graphml.py</a>.</p>
+<pre><code class="language-python">G = networkx.DiGraph()
+
+G.add_node('s0', type=&quot;state&quot;, name='start')
+G.add_node('s1', type=&quot;state&quot;, name='anything_you_want')
+
+G.add_node('o1', type=&quot;observation&quot;, name='+')
+G.add_node('o2', type=&quot;observation&quot;, name='-')
+
+G.add_edge('s0', 's1', type='transition', weight=1.0)
+G.add_edge('s1', 's1', type='transition', weight=1.0)
+
+G.add_edge('s1', 'o1', type='emission', weight=0.5, distribution='normal', param_location=5000000, param_scale=1000000)
+G.add_edge('s1', 'o2', type='emission', weight=0.5, distribution='exponential', param_rate=0.001)
+
+networkx.write_graphml(G, 'sample.mmodel.graphml')
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../tgen/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../tgen/TGen-Options.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../tgen/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../tgen/TGen-Options.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

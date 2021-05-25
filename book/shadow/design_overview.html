@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Design Overview - Shadow Simulator</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Shadow Network Simulator</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Installation and Setup</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/supported_platforms.html"><strong aria-hidden="true">1.1.</strong> Supported Platforms</a></li><li class="chapter-item expanded "><a href="../shadow/install_dependencies.html"><strong aria-hidden="true">1.2.</strong> Dependencies</a></li><li class="chapter-item expanded "><a href="../shadow/install_shadow.html"><strong aria-hidden="true">1.3.</strong> Shadow</a></li><li class="chapter-item expanded "><a href="../shadow/system_configuration.html"><strong aria-hidden="true">1.4.</strong> System Configuration</a></li><li class="chapter-item expanded "><a href="../shadow/install_shadow_with_docker.html"><strong aria-hidden="true">1.5.</strong> (Experimental) Shadow with Docker</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> The Shadow Simulator</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/getting_started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../shadow/parsing_statistics.html"><strong aria-hidden="true">2.2.</strong> Parsing Statistics</a></li><li class="chapter-item expanded "><a href="../shadow/log_format.html"><strong aria-hidden="true">2.3.</strong> Log Format</a></li><li class="chapter-item expanded "><a href="../shadow/design_overview.html" class="active"><strong aria-hidden="true">2.4.</strong> Design Overview</a></li><li class="chapter-item expanded "><a href="../shadow/notes_and_faq.html"><strong aria-hidden="true">2.5.</strong> Notes and FAQs</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Simulation Customization</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/shadow_config.html"><strong aria-hidden="true">3.1.</strong> Shadow Configuration</a></li><li class="chapter-item expanded "><a href="../shadow/network_config.html"><strong aria-hidden="true">3.2.</strong> Network Configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/network_graph_attributes.html"><strong aria-hidden="true">3.2.1.</strong> Graph Configuration</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Developer Guides</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/developer_guide.html"><strong aria-hidden="true">4.1.</strong> Debugging and Profiling</a></li><li class="chapter-item expanded "><a href="../shadow/ci.html"><strong aria-hidden="true">4.2.</strong> Continous Integration Tests</a></li><li class="chapter-item expanded "><a href="../shadow/using_recompiled_libc.html"><strong aria-hidden="true">4.3.</strong> Using a Recompiled Libc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> The Shadow Project</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/contributing.html"><strong aria-hidden="true">5.1.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/coding_style.html"><strong aria-hidden="true">5.1.1.</strong> Coding Style</a></li><li class="chapter-item expanded "><a href="../shadow/pull_requests.html"><strong aria-hidden="true">5.1.2.</strong> Pull Requests</a></li></ol></li><li class="chapter-item expanded "><a href="../shadow/maintainer_playbook.html"><strong aria-hidden="true">5.2.</strong> Maintainer Playbook</a></li><li class="chapter-item expanded "><a href="../shadow/nsf_sponsorship.html"><strong aria-hidden="true">5.3.</strong> NSF Sponsorship</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">TGen Traffic Generator</li><li class="chapter-item expanded "><a href="../tgen/index.html"><strong aria-hidden="true">6.</strong> About</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Markov-Models.html"><strong aria-hidden="true">7.</strong> Markov Models</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Options.html"><strong aria-hidden="true">8.</strong> Options</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Overview.html"><strong aria-hidden="true">9.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../tgen/Tools-JSON-Format.html"><strong aria-hidden="true">10.</strong> JSON Format</a></li><li class="chapter-item expanded affix "><li class="part-title">Tor Network Simulation</li><li class="chapter-item expanded "><a href="../tornettools/index.html"><strong aria-hidden="true">11.</strong> TorNetTools</a></li><li class="chapter-item expanded "><a href="../oniontrace/index.html"><strong aria-hidden="true">12.</strong> OnionTrace</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Shadow Simulator</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/shadow" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="mission-run-tor-in-a-box"><a class="header" href="#mission-run-tor-in-a-box">Mission: Run Tor in a Box</a></h2>
+<table><thead><tr><th>❗ Notice</th></tr></thead><tbody>
+<tr><td>This overview describes Shadow's original<br>architecture (version 1.x) and not the current<br>architecture.</td></tr>
+</tbody></table>
+<br>
+<!--[[https://raw.githubusercontent.com/wiki/shadow/shadow/assets/torinabox.png|align=right|width=175px]]-->
+<!--[Run Tor in a box with Shadow!][image-torinabox]-->
+<!--[image-torinabox]: https://raw.githubusercontent.com/wiki/shadow/shadow/assets/torinabox.png-->
+<p><a href="https://raw.githubusercontent.com/wiki/shadow/shadow/assets/torinabox.png"><img align="right" width="225" alt="Run Tor in a box with Shadow!" src="https://raw.githubusercontent.com/wiki/shadow/shadow/assets/torinabox.png"></a></p>
+<p>Shadow was developed because there was a recognized need for an accurate, efficient, and scalable tool for Tor experimentation: using the PlanetLab platform is undesirable due to management overhead and lack of control; existing emulators are far too inefficient when scaling to thousands of nodes; roll-your-own simulators are often too inaccurate or generic to be useful for multiple projects; and experiments on the live Tor network are often infeasible due to privacy risks.</p>
+<p>Our goal was to provide a tool that can be used by anyone with a Linux machine or access to EC2 to hasten the development of research prototypes and reduce the time to deployment. Although originally written with Tor experimentation in mind, Shadow can also run Bitcoin and is useful for researching or prototyping other distributed or peer-to-peer systems including multi-party computation protocols.</p>
+<h2 id="feature-overview"><a class="header" href="#feature-overview">Feature Overview</a></h2>
+<p>Shadow does the following:</p>
+<ul>
+<li>creates an isolated simulation environment where virtual hosts may communicate with each other but not with the Internet</li>
+<li>natively executes <strong>real applications</strong> like Tor and Bitcoin </li>
+<li>provides efficient, accurate, and <strong>controlled</strong> experiments</li>
+<li>models network topology, latency, and bandwidth</li>
+<li>runs without root on a single Linux machine</li>
+<li>simulates multiple virtual hosts in virtual time</li>
+<li>simulates the network (TCP stack) and CPU processing delays</li>
+<li>can run private Tor networks with user/traffic models based on <a href="https://metrics.torproject.org/">Tor metrics</a> </li>
+<li>much, much more!</li>
+</ul>
+<h2 id="real-applications-as-shadow-plug-ins"><a class="header" href="#real-applications-as-shadow-plug-ins">Real Applications as Shadow Plug-ins</a></h2>
+<p>Shadow is a discrete-event simulator that runs <strong>real applications</strong> like <a href="https://www.torproject.org/">Tor</a> . Shadow links to real application software and <strong>natively executes the application code</strong> during simulation, providing faithful experiments and accurate results. Shadow models and runs distributed networks using these applications on a single Linux machine, easing experiment management while keeping the focus on the results.</p>
+<h4 id="what-are-plug-ins"><a class="header" href="#what-are-plug-ins">What are Plug-ins?</a></h4>
+<p>Plug-ins are shared library shims that are linked to real applications. Shadow dynamically loads these libraries to natively execute the application code. Shadow intercepts a selective set of system calls to enable seamless integration of an application to the simulated environment. In this way, the application may be unaware that it is running in the simulator and will function as if it was running in a standard UNIX environment.</p>
+<p>Visit <a href="https://github.com/shadow/shadow/wiki/2-Simulation-Execution-and-Analysis#shadow-plug-ins">this page on the wiki</a> for more information about how to write your own custom Shadow plug-in.</p>
+<h4 id="what-is-shadow-plugin-tor"><a class="header" href="#what-is-shadow-plugin-tor">What is shadow-plugin-tor?</a></h4>
+<p>shadow-plugin-tor is a Shadow plug-in for simulating the <a href="https://www.torproject.org/">Tor</a> anonymity network. shadow-plugin-tor integrates Tor into Shadow by wrapping the <a href="https://gitweb.torproject.org/tor.git">Tor source code</a> with the necessary hooks that allow it to communicate with the Shadow simulator, thereby leveraging Shadow's unique functionality to allow rapid prototyping and experimentation of Tor. shadow-plugin-tor also contains scripts that assist in analyzing results, generating Tor topologies, and running experiments using the generated topologies.</p>
+<p>Visit <a href="https://github.com/shadow/shadow-plugin-tor/wiki">the shadow-plugin-tor wiki page</a> for more information on the Tor plug-in and its memory requirements.</p>
+<h2 id="simulation-blueprint"><a class="header" href="#simulation-blueprint">Simulation Blueprint</a></h2>
+<p>The first step to using Shadow is to create a blueprint of an experiment. The format of the blueprint is standard XML. The XML file tells Shadow when it should create each virtual host, what software each virtual host should run. It also specifies the structure of the network topology, and network properties such as link latency, jitter, and packet loss rates. Shadow contains example XML files to help get started!</p>
+<p><a href="https://raw.githubusercontent.com/wiki/shadow/shadow/assets/design1.png"><img title="design1" src="https://raw.githubusercontent.com/wiki/shadow/shadow/assets/design1.png" alt="" width="520" /></a></p>
+<p><em>Shadow takes a simulation blueprint as input. This XML file specifies the structure of the topology and the general flow of the experiment. Shadow's event engine initializes hosts using the blueprint, and runs events on their behalf until the simulation is complete.</em></p>
+<h2 id="discrete-time-events"><a class="header" href="#discrete-time-events">Discrete Time Events</a></h2>
+<p>Shadow creates several bootstrapping events after extracting the information from the supplied XML blueprint file. Each of these events are executed at a discrete time instant during the experiment. Each of these bootstrapping events will cause the virtual hosts to start executing the specified software, which in turn will spawn additional events for Shadow to process. Shadow tracks the time each virtual host spends processing inside the application, and delays events according to the host's configured virtual CPU speed. Events are continuously executed until the simulation end time.</p>
+<p>As applications send data to each other, Shadow packages that data into an internal type and transfers the pointer between various queues. This process involves the use of the main Shadow event queue to transfer the packet events between virtual hosts, and rate-limiting to ensure each host has the desired bandwidth capacity. The following image, courtesy of Steven Murdoch, may help visualize this process:</p>
+<p><a href="https://raw.githubusercontent.com/wiki/shadow/shadow/assets/shadow_packet_flow.pdf"><img title="shadow_packet_flow" src="assets/shadow_packet_flow.svg" alt="" width="520" /></a></p>
+<p><em>End-to-end application data flows through Shadow socket and interface buffers, while the discrete event queue facilitates the transfer of data between virtual hosts.</em></p>
+<h2 id="virtual-host-management"><a class="header" href="#virtual-host-management">Virtual Host Management</a></h2>
+<p>Each virtual host in Shadow runs real software, which are linked as Shadow plug-ins. For each instance of the plug-in that a host is configured to run, Shadow loads the plug-in into a private namespace container using a custom loader and <code>dlmopen()</code>. The loader takes care to minimize duplicated memory usage on multiple loads of the same plug-in.</p>
+<p>With the virtual host's plug-in loaded, execution is then passed to the application by calling the <code>main()</code> function using a version of <a href="https://www.gnu.org/software/pth/">GNU portable threads (pth)</a>. Pth is an application-space non-preemptive priority-based threading library that can jump call stacks to support plug-ins that run multiple threads and block during execution. Shadow runs the plug-in instance until it would block, and then moves on to execute other plug-ins and hosts.</p>
+<h2 id="function-interposition"><a class="header" href="#function-interposition">Function Interposition</a></h2>
+<p>Shadow runs real applications that run on regular UNIX-type systems. These applications expect a wide range of kernel libraries to be available for use. For example, sending and receiving data over the network, system time, and device polling are all generally handled by the kernel at some level. These system functions (and others) are intercepted and redirected through Shadow-specific versions. In this way, Shadow provides the ability for hosts to seamlessly communicate with each other over the virtual network without requiring any changes to the application code.</p>
+<h2 id="more-information"><a class="header" href="#more-information">More information</a></h2>
+<p>See <a href="http://youtu.be/Tb7m8OdpD8A">the original Shadow webcast</a> for more information about Shadow's original design, and for an explanation of some experiments that utilize this unique architecture. An explanation of recent architecture updates to support blocking system calls (read/write/send/recv/sleep) and applications that spawn threads <a href="http://www.robgjansen.com/talks/shadowbitcoin-cset-20150810.pdf">can be found here</a>. Checkout <a href="https://scholar.google.com/scholar?oi=bibs&amp;hl=en&amp;cites=12341442653770148265">Google Scholar</a> for research publications that cite Shadow.</p>
+<!--<iframe width="420" height="315" src="http://www.youtube-nocookie.com/embed/Tb7m8OdpD8A" frameborder="0" allowfullscreen></iframe>-->
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../shadow/log_format.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../shadow/notes_and_faq.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../shadow/log_format.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../shadow/notes_and_faq.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

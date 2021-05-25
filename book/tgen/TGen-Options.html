@@ -1,0 +1,317 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Options - Shadow Simulator</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Shadow Network Simulator</li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Installation and Setup</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/supported_platforms.html"><strong aria-hidden="true">1.1.</strong> Supported Platforms</a></li><li class="chapter-item expanded "><a href="../shadow/install_dependencies.html"><strong aria-hidden="true">1.2.</strong> Dependencies</a></li><li class="chapter-item expanded "><a href="../shadow/install_shadow.html"><strong aria-hidden="true">1.3.</strong> Shadow</a></li><li class="chapter-item expanded "><a href="../shadow/system_configuration.html"><strong aria-hidden="true">1.4.</strong> System Configuration</a></li><li class="chapter-item expanded "><a href="../shadow/install_shadow_with_docker.html"><strong aria-hidden="true">1.5.</strong> (Experimental) Shadow with Docker</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> The Shadow Simulator</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/getting_started.html"><strong aria-hidden="true">2.1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../shadow/parsing_statistics.html"><strong aria-hidden="true">2.2.</strong> Parsing Statistics</a></li><li class="chapter-item expanded "><a href="../shadow/log_format.html"><strong aria-hidden="true">2.3.</strong> Log Format</a></li><li class="chapter-item expanded "><a href="../shadow/design_overview.html"><strong aria-hidden="true">2.4.</strong> Design Overview</a></li><li class="chapter-item expanded "><a href="../shadow/notes_and_faq.html"><strong aria-hidden="true">2.5.</strong> Notes and FAQs</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Simulation Customization</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/shadow_config.html"><strong aria-hidden="true">3.1.</strong> Shadow Configuration</a></li><li class="chapter-item expanded "><a href="../shadow/network_config.html"><strong aria-hidden="true">3.2.</strong> Network Configuration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/network_graph_attributes.html"><strong aria-hidden="true">3.2.1.</strong> Graph Configuration</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Developer Guides</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/developer_guide.html"><strong aria-hidden="true">4.1.</strong> Debugging and Profiling</a></li><li class="chapter-item expanded "><a href="../shadow/ci.html"><strong aria-hidden="true">4.2.</strong> Continous Integration Tests</a></li><li class="chapter-item expanded "><a href="../shadow/using_recompiled_libc.html"><strong aria-hidden="true">4.3.</strong> Using a Recompiled Libc</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> The Shadow Project</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/contributing.html"><strong aria-hidden="true">5.1.</strong> Contributing</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../shadow/coding_style.html"><strong aria-hidden="true">5.1.1.</strong> Coding Style</a></li><li class="chapter-item expanded "><a href="../shadow/pull_requests.html"><strong aria-hidden="true">5.1.2.</strong> Pull Requests</a></li></ol></li><li class="chapter-item expanded "><a href="../shadow/maintainer_playbook.html"><strong aria-hidden="true">5.2.</strong> Maintainer Playbook</a></li><li class="chapter-item expanded "><a href="../shadow/nsf_sponsorship.html"><strong aria-hidden="true">5.3.</strong> NSF Sponsorship</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">TGen Traffic Generator</li><li class="chapter-item expanded "><a href="../tgen/index.html"><strong aria-hidden="true">6.</strong> About</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Markov-Models.html"><strong aria-hidden="true">7.</strong> Markov Models</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Options.html" class="active"><strong aria-hidden="true">8.</strong> Options</a></li><li class="chapter-item expanded "><a href="../tgen/TGen-Overview.html"><strong aria-hidden="true">9.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../tgen/Tools-JSON-Format.html"><strong aria-hidden="true">10.</strong> JSON Format</a></li><li class="chapter-item expanded affix "><li class="part-title">Tor Network Simulation</li><li class="chapter-item expanded "><a href="../tornettools/index.html"><strong aria-hidden="true">11.</strong> TorNetTools</a></li><li class="chapter-item expanded "><a href="../oniontrace/index.html"><strong aria-hidden="true">12.</strong> OnionTrace</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Shadow Simulator</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/shadow" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                        
+
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="tgen-options-attributes"><a class="header" href="#tgen-options-attributes">TGen Options (attributes)</a></h1>
+<p>In <a href="TGen-Overview.html">doc/TGen-Overview.md</a> we provided an overview how we use a graph to configure TGen. You should read and understand that document first. In this document we specify the full set of options (attributes) that can be set on each action (vertex) in the TGen configuration graph.</p>
+<h2 id="option-formats"><a class="header" href="#option-formats">Option formats</a></h2>
+<p>All attributes are currently stored as strings in graphml. When we specify the attributes, we use the following shorthand to describe the value formats:</p>
+<ul>
+<li>peer: &lt;ip&gt;:&lt;port&gt;<br />
+e.g., 127.0.0.1:9050 or 192.168.1.100:8080</li>
+<li>size: &lt;integer&gt; &lt;suffix&gt;<br />
+e.g., &quot;5 suffix&quot; (&quot;5&quot; defaults to &quot;5 bytes&quot;) where suffix is case in-sensitive and one of:<br />
+b, byte, bytes,<br />
+kb, kilobyte, kilobytes,<br />
+kib, kibibyte, kibibytes,<br />
+mb, megabyte, megabytes,<br />
+mib, mebibyte, mebibytes,<br />
+gb, gigabyte, gigabytes,<br />
+gib, gibibyte, gibibytes,<br />
+tb, terabyte, terabytes,<br />
+tib, tebibyte, tebibytes</li>
+<li>time: &lt;integer&gt; &lt;suffix&gt;<br />
+e.g., &quot;60 suffix&quot; (&quot;60&quot; defaults to &quot;60 seconds&quot;) where suffix is case in-sensitive and one of:<br />
+nanosecond, nanoseconds, nsec, nsecs, ns,<br />
+microsecond, microseconds, usec, usecs, us,<br />
+millisecond, milliseconds, msec, msecs, ms,<br />
+second, seconds, sec, secs, s,<br />
+minute, minutes, min, mins, m,<br />
+hour, hours, hr, hrs, h</li>
+</ul>
+<h2 id="start-options"><a class="header" href="#start-options">Start options</a></h2>
+<p>Acceptable attributes for the <strong>start</strong> action:</p>
+<table><thead><tr><th>Name</th><th>Format</th><th>Example</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>serverport</em></td><td>&lt;integer&gt;</td><td>8080</td><td>The local port that will be opened to listen for other tgen connections. Set this value if your tgen instance should act as a server for other tgen client requests.</td></tr>
+<tr><td><em>time</em></td><td>&lt;time&gt;</td><td>1 second</td><td>The time that tgen should delay before starting a walk through the action graph. If not given, tgen will start immediately upon process initialization.</td></tr>
+<tr><td><em>heartbeat</em></td><td>&lt;time&gt;</td><td>1 second</td><td>The time between which heartbeat status messages are logged at 'message' level. A default of 1 second is used if <em>heartbeat</em> is not set. The heartbeat message is disabled if <em>heartbeat</em> is set to 0.</td></tr>
+<tr><td><em>loglevel</em></td><td>&lt;string&gt;</td><td>info</td><td>The level above which tgen log messages will be filtered and not shown or logged. Valid values in increasing order are: 'error', 'critical', 'message', 'info', and 'debug'. The default value if <em>loglevel</em> is not set is 'message'.</td></tr>
+<tr><td><em>*</em></td><td>*</td><td>*</td><td>All options for the <strong>traffic</strong>, <strong>flow</strong>, and <strong>stream</strong> actions specified below can also be set in the <strong>start</strong> action. Any such options that are specified in the <strong>start</strong> action are treated as the global default option for all such actions. You can then override this global default by also setting the option in any individual action.</td></tr>
+</tbody></table>
+<h2 id="traffic-options"><a class="header" href="#traffic-options">Traffic options</a></h2>
+<p>Acceptable attributes for the <strong>traffic</strong> action:</p>
+<table><thead><tr><th>Name</th><th>Format</th><th>Example</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>flowmodelpath</em></td><td>&lt;filepath&gt;</td><td>~/flows.graphml</td><td>The Markov model to use to generate flows. If unspecified, tgen will use a default Markov model that repeatedly generates flows in both directions at a constant rate and with no inter-flow delay.</td></tr>
+<tr><td>*</td><td>*</td><td>*</td><td>All options for the <strong>flow</strong> and <strong>stream</strong> actions specified below can also be set in the <strong>traffic</strong> action. Any flow or stream options that are specified in the traffic action will be passed through to all flows and streams generated with the flow and stream Markov models specified for this traffic action (and will therefore override options with the same name that were specified in the start action).</td></tr>
+</tbody></table>
+<h2 id="flow-options"><a class="header" href="#flow-options">Flow options</a></h2>
+<p>Acceptable attributes for the <strong>flow</strong> action:</p>
+<table><thead><tr><th>Name</th><th>Format</th><th>Example</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>streammodelpath</em></td><td>&lt;filepath&gt;</td><td>~/streams.graphml</td><td>The Markov model to use to generate streams in this flow. If unspecified, tgen will use a default Markov model that repeatedly generates streams in both directions at a constant rate and with no inter-stream delay.</td></tr>
+<tr><td>*</td><td>*</td><td>*</td><td>All options for the <strong>stream</strong> action specified below can also be set in the <strong>flow</strong> action. Any stream options that are specified in the flow action will be passed through to all streams generated with the stream Markov model specified for this flow (and will therefore override options with the same name that were specified in the start action).</td></tr>
+</tbody></table>
+<h2 id="stream-options"><a class="header" href="#stream-options">Stream options</a></h2>
+<p>Acceptable attributes for the <strong>stream</strong> action:</p>
+<table><thead><tr><th>Name</th><th>Format</th><th>Example</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>packetmodelpath</em></td><td>&lt;filepath&gt;</td><td>~/packets.graphml</td><td>The Markov model to use to generate packets in this stream. If unspecified, tgen will use an internal default Markov model with no end state that causes tgen to continously generates packets in both directions with no inter-packet delay.</td></tr>
+<tr><td><em>packetmodelmode</em></td><td>&lt;string&gt;</td><td>'path' or 'graphml'</td><td>Sets the mode that tgen uses to send the packet Markov model to the server. If unset or set to 'graphml', the tgen client will load the model locally and send a string representation of the model formatted as graphml during the stream handshake. If set to 'path', the client will send the path given in the <em>packetmodelpath</em> attribute to the server, and the server will attempt to load the model at that same path (the server must already have a copy of the model).</td></tr>
+<tr><td><em>markovmodelseed</em></td><td>&lt;integer&gt;</td><td>12345</td><td>The seed that will be used to initialize a pseudorandom number generator (prng) that will generate seeds for all Markov models created for this action. If unspecified, tgen initializes the prng using a seed generated by a global prng that was randomly seeded.</td></tr>
+<tr><td><em>peers</em></td><td>&lt;peer&gt;,...</td><td>10.0.0.1,...</td><td><strong>Required:</strong> a comma-separated list of peers to use for this <strong>stream</strong>. The <em>peers</em> attribute is <strong>required</strong> unless a <em>peers</em> attribute is specified in the <strong>start</strong> action. A peer will be selected at random from this list, or at random from the <strong>start</strong> action list if this attribute is not specified.</td></tr>
+<tr><td><em>socksproxy</em></td><td>&lt;peer&gt;,...</td><td>127.0.0.1:9050</td><td>A comma-separated list of peers to use as proxy servers through which all connections to other tgen peers will be made. If not given, tgen will connect to the peer directly unless this option is set in the <strong>start</strong> action.</td></tr>
+<tr><td><em>socksusername</em></td><td>&lt;string&gt;</td><td>myuser</td><td>The SOCKS username that we should send to the SOCKS proxy during the SOCKS handshake for this stream. This option is ignored unless <em>socksproxy</em> is also set in either this <strong>stream</strong> action or in the <strong>start</strong> action.</td></tr>
+<tr><td><em>sockspassword</em></td><td>&lt;string&gt;</td><td>mypass</td><td>The SOCKS password that we should send to the SOCKS proxy during the SOCKS handshake for this stream. This option is ignored unless <em>socksproxy</em> is also set in either this <strong>stream</strong> action or in the <strong>start</strong> action.</td></tr>
+<tr><td><em>socksauthseed</em></td><td>&lt;integer&gt;</td><td>12345</td><td>If set, the seed that will be used to initialize a pseudorandom number generator (prng) that will generate random <em>socksusername</em> and <em>sockspassword</em> strings that we send to the SOCKS proxy during the SOCKS handshake. If set on a <strong>stream</strong> action, random strings will be generated for each stream; otherwise, random strings will be generated for each <strong>flow</strong>, and all streams generated by a flow will use the same strings as the flow that generated them. This option is ignored unless <em>socksproxy</em> is also set, and overrides any <em>socksusername</em> and <em>sockspassword</em> options that were set.</td></tr>
+<tr><td><em>sendsize</em></td><td>&lt;size&gt;</td><td>5 KiB</td><td>The amount of payload data to send from the client to the server after completing the initial handshake. If not set, then the client will continue sending data until it reaches the end state in the Markov model. If set to a positive value, the Markov model will be reset and repeated as necessary until the <em>sendsize</em> is reached. If set to 0, the client will send no payload data following the handshake. To send an infinite stream, either configure a Markov model with no 'F' emissions or don't configure a Markov model (in which case an internal nonstop model will be used).</td></tr>
+<tr><td><em>recvsize</em></td><td>&lt;size&gt;</td><td>10 MiB</td><td>This is analagous to the <em>sendsize</em> option, but for payload data received by the client from the server (i.e., payload data sent from the server to the client).</td></tr>
+<tr><td><em>timeout</em></td><td>&lt;time&gt;</td><td>2 minutes</td><td>The amount of time since the stream started after which we give up on it. If specified, this stream overrides any <em>timeout</em> attribute that may have been set on the <strong>start</strong> action. If this is set to 0, then an absolute timeout is disabled. If this is not set and is also not set in <strong>start</strong> action, then an absolute timeout is disabled.</td></tr>
+<tr><td><em>stallout</em></td><td>&lt;time&gt;</td><td>30 seconds</td><td>The amount of time since bytes were last sent or received for this stream after which we consider this a stalled stream and give up on it. If specified, this stream overrides any <em>stallout</em> attribute that may have been set on the <strong>start</strong> element. If this is set to 0, then a stallout is disabled. If this is not set and is also not set in <strong>start</strong> action, then an internally defined stallout is used instead (currently 30 seconds).</td></tr>
+</tbody></table>
+<h2 id="pause-options"><a class="header" href="#pause-options">Pause options</a></h2>
+<p>Acceptable attributes for the <strong>pause</strong> action:</p>
+<table><thead><tr><th>Name</th><th>Format</th><th>Example</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>time</em></td><td>&lt;time&gt;,...</td><td>5 seconds,...</td><td>The time or comma-separated list of times that the tgen node should pause before resuming the walk through the action graph. If a list is given, a time from the list will be chosen uniformly at random every time the pause action is encountered while walking the graph.</td></tr>
+</tbody></table>
+<h2 id="end-options"><a class="header" href="#end-options">End options</a></h2>
+<p>Acceptable attributes for the <strong>end</strong> action:</p>
+<table><thead><tr><th>Name</th><th>Format</th><th>Example</th><th>Description</th></tr></thead><tbody>
+<tr><td><em>time</em></td><td>&lt;time&gt;</td><td>10 minutes</td><td>Stop if this amount of time has passed since tgen started.</td></tr>
+<tr><td><em>count</em></td><td>&lt;integer&gt;</td><td>10</td><td>Stop if tgen has completed (successfully or not) this number of streams.</td></tr>
+<tr><td><em>sendsize</em></td><td>&lt;size&gt;</td><td>1 GiB</td><td>Stop if this amount of data was sent by the client.</td></tr>
+<tr><td><em>recvsize</em></td><td>&lt;size&gt;</td><td>1 GiB</td><td>Stop if this amount of data was received by the client.</td></tr>
+</tbody></table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../tgen/TGen-Markov-Models.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../tgen/TGen-Overview.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../tgen/TGen-Markov-Models.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../tgen/TGen-Overview.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
